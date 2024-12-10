@@ -28,6 +28,122 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <style>
+      .our-team {
+        border: 1px solid var(--platinum);
+        text-align: center;
+        color: var(--amaranth-purple);
+        overflow: hidden;
+        transition: all 0.3s ease 0s;
+        background-color: var(--space-cadet-1);
+      }
+      .our-team:hover {
+        background: var(--amaranth-purple);
+        color: var(--white);
+      }
+      .our-team .pic {
+        position: relative;
+        width: 100%;
+        height: 200px; /* Fixed height for consistent images */
+        overflow: hidden;
+      }
+      .our-team .pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease 0s;
+      }
+      .our-team:hover .pic img {
+        transform: translateY(-20px);
+      }
+      .our-team .social {
+        width: 20%;
+        height: 100%;
+        background: var(--amaranth-purple);
+        padding: 20px 0;
+        margin: 0;
+        list-style: none;
+        position: absolute;
+        top: 0;
+        left: -50%;
+        transition: all 0.5s ease 0s;
+      }
+      .our-team:hover .social {
+        left: 0;
+      }
+      .our-team .social li {
+        display: block;
+      }
+      .our-team .social li a {
+        display: block;
+        padding: 10px 0;
+        font-size: 20px;
+        color: var(--white);
+        transition: all 0.5s ease 0s;
+      }
+      .our-team .social li a:hover {
+        color: var(--chrome-yellow);
+      }
+      .our-team .team-content {
+        padding: 25px 0;
+        background: var(--space-cadet-2);
+      }
+      .our-team .title {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin: 0 0 10px 0;
+        color: var(--white);
+      }
+      .our-team .post {
+        display: block;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: var(--platinum);
+      }
+      @media only screen and (max-width: 990px) {
+        .our-team {
+            margin-bottom: 30px;
+        }
+      }
+      
+      .row {
+        display: flex;
+        flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+        justify-content: space-between; /* Adds space between cards */
+        gap: 20px; /* Optional: Adds consistent spacing between items */
+      }
+      
+      .col-md-3.col-sm-6 {
+        flex: 1 1 22%; /* Adjust width: 22% for four cards in a row */
+        max-width: 22%;
+        box-sizing: border-box;
+      }
+      
+      @media only screen and (max-width: 1200px) {
+        .col-md-3.col-sm-6 {
+            flex: 1 1 30%; /* Adjust width for tablets */
+            max-width: 30%;
+        }
+      }
+      
+      @media only screen and (max-width: 768px) {
+        .col-md-3.col-sm-6 {
+            flex: 1 1 45%; /* Two cards per row on smaller screens */
+            max-width: 45%;
+        }
+      }
+      
+      @media only screen and (max-width: 480px) {
+        .col-md-3.col-sm-6 {
+            flex: 1 1 100%; /* Single column for very small screens */
+            max-width: 100%;
+        }
+      }
+      
+      
+    </style>
 </head>
 
 <body id="top">
